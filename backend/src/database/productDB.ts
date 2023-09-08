@@ -1,5 +1,5 @@
 import { connection } from "../database/connection";
-import { ProductDB } from "../model/Product"
+import { Product, ProductDB } from "../model/Product"
 
 export async function getProduct(code: number): Promise<any> {
     try {
@@ -14,6 +14,18 @@ export async function getProduct(code: number): Promise<any> {
         return result[0];
 
     } catch (error: any) {
+        throw new error(error.message || error.sqlMessage);
+    }
+}
+
+export async function updateProducts(products: Product): Promise<any> {
+    try {
+        await connection.raw(`
+            UPDATE products
+            SET sales_price = ${products.newPrice}
+            WHERE code = ${products.code}
+        `)
+    } catch (error:any) {
         throw new error(error.message || error.sqlMessage);
     }
 }
