@@ -25,9 +25,9 @@ O sistema deve:
 - [x] No backend a API irá validar se o arquivo segue o padrão proposto, se o valor a ser alterado é um valor válido, se o produto existe, etc.
 A parte mais complexa do projeto é a que faz a veirificação para saber se o produto é um pacote ou se pertence ao pacote pois esses produtos seguem os valores um do outro.
 
-- [x] Ao validar e enviar e enviar o arquivo, o sistema apresentará uma mensagem de conclusão positiva e os produtos serão modificados no banco de dados.
+- [x] Ao validar e enviar o arquivo, o sistema apresentará uma mensagem de conclusão positiva e os produtos serão modificados no banco de dados.
 
-- [x] O fluxo de telas foi feito todo com renderização conficional
+- [x] O fluxo de telas foi feito todo com renderização condicional
 
 ## Tecnologias empregadas
 
@@ -114,8 +114,8 @@ npm run start
 ### Validação negativa
 ![validação negativa](./screen3.jpg)
 ### Validação positiva
-![validação positiva](./screen5.jpg)
+![validação positiva](./screen4.jpg)
 ### Tela final
-![conclusão](./screen6.jpg)
+![conclusão](./screen5.jpg)
 
 
